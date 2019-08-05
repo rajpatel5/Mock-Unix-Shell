@@ -4,14 +4,20 @@ This assignment was assigned by the B07(Software Design) course instructor at th
 
 It was coded in Java and eclipse was the used as the IDE for debugging and testing. This assignment allows the user to connect to the web to retrieve any files from online using the URL object and buffered stream provided by Java, it also displays the entire file system as a tree structure through recursive implementation, and it remains perfectly stable even with invalid user inputs. It uses interfaces which allow objects to be referenced by the methods they support without considering their location in the class hierarchy. The shell also clearly displays errors, telling exactly what the error was and how the user can go about fixing it and clear, thorough documentation is provided which can be accessed using the man command.
 
-| Command       | Documentation | Input         |Redirection?  |
-| ------------- |:--------------| :-------------|:------------:|
-| exit          | Quit the program | None          |YES           |
-| mkdir         | Create directories, each of which may be relative to the current directory or maybe a full path.      | DIR...        |NO   |
-| cd | Change directory to DIR, which may be relative to the current directory or maybe a full path.  As withUnix, ..  means a parent directory and a .  means the current directory.  The directory must be /, the forwardslash.  The foot of the file system is a single slash:  /.   | DIR | NO|
-| ls          | if –R is present, recursively list all subdirectories.If no paths are given, print the contents (file or directory) of the current directory, with a new line followingeach of the content (file or directory).Otherwise, for each path p, the order listed:If p specifies a file, print pIf p specifies a directory, print p, a colon, then the contents of that directory, then an extra new line.If p does not exist, print a suitable message.| [-R] [PATH . . . ] |YES        |
-| exit          | Quit the program | None          |YES           |
-| exit          | Quit the program | None          |YES           |
-| exit          | Quit the program | None          |YES           |
-| exit          | Quit the program | None          |YES           |
-| exit          | Quit the program | None          |YES           |
+| Command and Input  | Documentation | Redirection?  |
+| ------------- |:--------------| :------------:|
+| exit          | Quit the program|YES          |
+| mkdir DIR. . .  | Create directories, each of which may be relative to the current directory or maybe a full path.      | NO   |
+| cd | Change directory to DIR, which may be relative to the current directory or maybe a full path.  As withUnix, ..  means a parent directory and a .  means the current directory.  The directory must be /, the forwardslash.  The foot of the file system is a single slash:  /. | NO|
+| ls [-R] [PATH . . . ]  | If –R is present, recursively list all subdirectories.If no paths are given, print the contents (file or directory) of the current directory, with a new line followingeach of the content (file or directory).Otherwise, for each path p, the order listed:If p specifies a file, print pIf p specifies a directory, print p, a colon, then the contents of that directory, then an extra new line.If p does not exist, print a suitable message.|YES        |
+| pwd          | Print the current working directory (including the whole path). | YES           |
+| mv OLDPATH NEWPATH | Both OLD-PATH  and  NEWPATH  may  be  relative  to  the  current  directory  or  may  be  full  paths.   If  NEWPATH  is  adirectory, move the item into the directory. | NO         |
+| cp OLDPATH NEWPATH |  Like mv, but don’t remove OLDPATH. If OLDPATHis a directory, recursively copy the contents. | NO           |
+| cat FILE . . .     | If there are more than one file, you must display all their contents on the console.  (assumingall are a valid path).  For any file that contains an invalid path, display an appropriate error for that path only.All other valid paths must still be shown on the console.Display the contents of FILE and other files on the console in the shell.| YES           |
+| echo String          | Print String | YES           |
+| man CMD          | Print documentation for CMD. | YES           |
+| pushd DIR         | Saves  the  current  working  directory  by  pushing  onto  directory  stack  and  then  changes  the  new  currentworking  directory  to  DIR.  The  push  must  be  consistent  as  per  the  LIFO  behaviour  of  a  stack.   The  pushdcommand saves the old current working directory in directory stack so that it can be returned to at any time (via the popd command).  The size of the directory stack is dynamic and dependent on the pushd and the popdcommands. | NO           |
+| popd          |Remove the top entry from the directory stack, and cd into it.  The removal must be consistent as per theLIFO behaviour of a stack.  The popd command removes the topmost directory from the directory stack andmakes it the current working directory.  If there is no directory onto the stack, then give an appropriate errormessage. | NO           |
+| get URL          | URL is a web address.  Retrieve the file at that URLand add it to the current working directory. | YES           |
+| get URL          | URL is a web address.  Retrieve the file at that URLand add it to the current working directory. | YES           |
+| get URL          | URL is a web address.  Retrieve the file at that URLand add it to the current working directory. | YES           |
