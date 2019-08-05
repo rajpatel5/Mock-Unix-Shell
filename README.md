@@ -4,8 +4,14 @@ This assignment was assigned by the B07(Software Design) course instructor at th
 
 It was coded in Java and eclipse was the used as the IDE for debugging and testing. This assignment allows the user to connect to the web to retrieve any files from online using the URL object and buffered stream provided by Java, it also displays the entire file system as a tree structure through recursive implementation, and it remains perfectly stable even with invalid user inputs. It uses interfaces which allow objects to be referenced by the methods they support without considering their location in the class hierarchy. The shell also clearly displays errors, telling exactly what the error was and how the user can go about fixing it and clear, thorough documentation is provided which can be accessed using the man command.
 
-| Commands      | Documentation | Input         |Redirection?  |
+| Command       | Documentation | Input         |Redirection?  |
 | ------------- |:--------------| :-------------|:------------:|
-| Exit          | right-aligned | None          |YES           |
-| Mkdir         | Create directories, each of which may be relative to the current directory or maybe a full path.      | DIR...        |NO            |
-| zebra stripes | are neat      |    $1 |
+| exit          | Quit the program | None          |YES           |
+| mkdir         | Create directories, each of which may be relative to the current directory or maybe a full path.      | DIR...        |NO   |
+| cd | Change directory to DIR, which may be relative to the current directory or maybe a full path.  As withUnix, ..  means a parent directory and a .  means the current directory.  The directory must be /, the forwardslash.  The foot of the file system is a single slash:  /.   | DIR | NO|
+| ls          | if –R is present, recursively list all subdirectories.If no paths are given, print the contents (file or directory) of the current directory, with a new line followingeach of the content (file or directory).Otherwise, for each path p, the order listed:If p specifies a file, print pIf p specifies a directory, print p, a colon, then the contents of that directory, then an extra new line.If p does not exist, print a suitable message.| [-R] [PATH . . . ] |YES        |
+| exit          | Quit the program | None          |YES           |
+| exit          | Quit the program | None          |YES           |
+| exit          | Quit the program | None          |YES           |
+| exit          | Quit the program | None          |YES           |
+| exit          | Quit the program | None          |YES           |
