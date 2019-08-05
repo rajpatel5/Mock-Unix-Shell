@@ -6,7 +6,7 @@ It was coded in Java and eclipse was the used as the IDE for debugging and testi
 
 | Command and Input    | Documentation     | Redirection?|
 | ---------------------|:------------------| :----------:|
-| exit            | Quit the program| YES |
+| exit            | Quit the program| NO |
 | mkdir DIR. . .  | Create directories, each of which may be relative to the current directory or maybe a full path.      | NO |
 | cd | Change directory to DIR, which may be relative to the current directory or maybe a full path.  As with Unix, ..  means a parent directory and a . means the current directory.  The directory must be /, the forward slash.  The foot of the file system is a single slash:  /. | NO |
 | ls [-R] [PATH . . . ]  | If –R is present, recursively list all subdirectories. If no paths are given, print the contents (file or directory) of the current directory, with a new line following each of the content (file or directory). Otherwise, for each path p, the order listed: If p specifies a file, print p. If p specifies a directory, print p, a colon, then the contents of that directory, then an extra new line. If p does not exist, print a suitable message.| YES |
